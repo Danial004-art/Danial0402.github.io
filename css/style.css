@@ -476,4 +476,34 @@ footer p {
     color: #b6ffff;
     opacity: 0.8;
 }
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid cyan;
+    background: black;
+    color: white;
+    margin-top: 10px;
+}
 
+button{
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    background: cyan;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button:hover{
+    background: magenta;
+    color: white;
+    box-shadow: 0 0 15px magenta;
+}
+
+#result{
+    margin-top: 15px;
+    font-size: 18px;
+    color: cyan;
+}
