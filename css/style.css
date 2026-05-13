@@ -449,15 +449,22 @@ color: #000000; /* black */
     font-weight: bold;
 }
 footer {
+    width: 100%;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 50px;
+
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid #00ffff;
+
     color: #00ffff;
     font-family: 'Orbitron', sans-serif;
-    border-top: 2px solid #00ffff;
-    background: #050510;
+
     text-shadow: 0 0 10px #00ffff;
     box-shadow: 0 0 20px #00ffff;
+
+    position: relative;
+    bottom: 0;
 }
 
 footer p {
