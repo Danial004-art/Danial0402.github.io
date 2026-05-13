@@ -448,5 +448,25 @@ color: #000000; /* black */
     text-anchor: middle;
     font-weight: bold;
 }
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    border-top: 2px solid #00ffff;
+    background: #050510;
+    text-shadow: 0 0 10px #00ffff;
+    box-shadow: 0 0 20px #00ffff;
+}
 
+footer p {
+    margin: 5px 0;
+}
+
+.disclaimer {
+    font-size: 12px;
+    color: #b6ffff;
+    opacity: 0.8;
+}
 
