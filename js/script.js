@@ -81,22 +81,6 @@ body::before {
     100% {transform: scale(1);}
 }
 
-/* 🔥 HARD GLITCH BORDER EFFECT */
-.container {
-    animation: containerGlitch 5s infinite;
-}
-
-@keyframes containerGlitch {
-    0% {filter: none;}
-    96% {filter: none;}
-    97% {filter: hue-rotate(90deg) contrast(2);}
-    98% {filter: invert(1);}
-    99% {filter: none;}
-}
-.card:hover {
-    animation: shake 0.2s linear infinite;
-}
-
 @keyframes shake {
     0% {transform: translate(1px, 1px);}
     25% {transform: translate(-1px, 0px);}
