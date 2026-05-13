@@ -1,0 +1,452 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0f0f1a, #000);
+    color: #00fff7;
+}
+nav {
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: 2px solid #00fff7;
+    box-shadow: 0 0 20px #00fff7;
+}
+
+nav a {
+    color: #00fff7;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.container {
+    padding: 40px;
+    animation: fadeIn 1s ease-in;
+}
+
+h1 {
+    text-shadow: 0 0 10px #00fff7;
+}
+
+.card {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border: 1px solid #00fff7;
+    box-shadow: 0 0 15px #00fff7;
+    border-radius: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.img-box {
+    width: 100%;
+    height: 200px;
+    border: 2px solid #00fff7;
+    box-shadow: 0 0 10px #00fff7;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.img-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(transparent 95%, rgba(0,255,247,0.1) 96%),
+        linear-gradient(90deg, transparent 95%, rgba(255,0,255,0.1) 96%);
+    background-size: 40px 40px;
+    z-index: -1;
+    animation: gridMove 6s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes gridMove {
+    from {transform: translate(0,0);}
+    to {transform: translate(40px,40px);}
+}
+
+/* 🌊 floating card animation */
+.card {
+    animation: floatCard 4s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+/* ⚡ glow pulse border */
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,255,247,0.2), transparent 60%);
+    animation: glowMove 5s linear infinite;
+}
+
+@keyframes glowMove {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/* 💀 page fade transition */
+body {
+    animation: pageIn 0.8s ease-in;
+}
+
+@keyframes pageIn {
+    from {opacity: 0; transform: scale(1.05);}
+    to {opacity: 1; transform: scale(1);}
+}
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: #00fff7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    letter-spacing: 5px;
+    z-index: 9999;
+    animation: fadeLoad 2s ease forwards;
+}
+
+@keyframes fadeLoad {
+    0% {opacity: 1;}
+    80% {opacity: 1;}
+    100% {opacity: 0; visibility: hidden;}
+}
+a {
+    position: relative;
+    overflow: hidden;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,255,247,0.3);
+    left: -100%;
+    top: 0;
+    transition: 0.3s;
+}
+
+a:hover::after {
+    left: 0;
+}
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00fff7;
+    text-shadow: 
+        0 0 5px #00fff7,
+        0 0 15px #00fff7,
+        0 0 30px #ff00ff;
+    animation: glowPulse 2s infinite alternate;
+}
+.stats-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.circle-svg{
+    width:180px;
+    height:180px;
+    transform:rotate(-90deg);
+}
+
+.bg{
+    fill:none;
+    stroke:#222;
+    stroke-width:15;
+}
+
+.progress{
+    fill:none;
+    stroke:cyan;
+    stroke-width:15;
+    stroke-linecap:round;
+
+    stroke-dasharray: 502;
+    stroke-dashoffset: 502;
+
+    transition: stroke-dashoffset 1s ease;
+}
+.label{
+    fill:cyan;
+    font-size:18px;
+    text-anchor:middle;
+    transform:rotate(90deg);
+}
+
+@keyframes glowPulse {
+    from {
+        text-shadow: 
+        0 0 5px #00fff7,
+        0 0 10px #00fff7;
+    }
+    to {
+        text-shadow: 
+        0 0 10px #ff00ff,
+        0 0 25px #00fff7,
+        0 0 40px #ff00ff;
+    }
+}
+a {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00fff7;
+    transform: scale(1.1);
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(0,255,247,0.05),
+        rgba(0,255,247,0.05) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+    animation: scanMove 6s linear infinite;
+}
+
+@keyframes scanMove {
+    from {transform: translateY(0);}
+    to {transform: translateY(40px);}
+}
+#gameVideo{
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    display: block;
+    margin: 30px auto;
+    border: 3px solid cyan;
+    box-shadow: 0 0 20px cyan;
+    background: black;
+}
+
+/* PROFILE SECTION */
+.profile-section{
+    display:flex;
+    gap:20px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+/* PROFILE IMAGE */
+.profile-img{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border:2px solid #00fff7;
+    box-shadow:0 0 20px #00fff7;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.profile-img:hover{
+    transform:scale(1.05);
+}
+
+/* ABOUT CARD */
+.about-card{
+    margin-top:30px;
+}
+
+/* DETAILS SECTION */
+.details-section{
+    display:flex;
+    align-items:flex-start;
+    gap:30px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+/* DETAILS CARD */
+.details-card{
+    flex:1;
+    min-width:300px;
+}
+
+/* CYBER IMAGES */
+.cyber-img{
+    width:300px;
+    border-radius:15px;
+    border:2px solid #00fff7;
+    box-shadow:0 0 20px #00fff7;
+    object-fit:cover;
+    transition:0.3s;
+}
+
+.cyber-img:hover{
+    transform:scale(1.05);
+}
+
+/* TITLE */
+.title{
+    text-align:center;
+    color:cyan;
+    font-family:Orbitron;
+    text-shadow:0 0 10px cyan;
+}
+
+/* SKILL BOX */
+.skill-box{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+/* ITEM */
+.skill-item{
+    background:#111;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    cursor:pointer;
+    border:1px solid cyan;
+    transition:0.3s;
+}
+
+.skill-item:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px cyan;
+color: #000000; /* black */
+}
+
+
+.close{
+    float:right;
+    cursor:pointer;
+    color:red;
+    font-size:20px;
+}
+/* PIE CHART BASE */
+.circle-chart{
+    width:220px;
+    height:220px;
+    transform:rotate(-90deg);
+}
+
+/* BACKGROUND RING */
+.circle-bg{
+    fill:none;
+    stroke:#222;
+    stroke-width:3.8;
+}
+
+/* PROGRESS RING */
+.circle{
+    fill:none;
+    stroke:cyan;
+    stroke-width:3.8;
+    stroke-linecap:round;
+    stroke-dasharray:85 100;
+    animation:fill 1.5s ease forwards;
+}
+
+/* TEXT */
+.percentage{
+    fill:cyan;
+    font-size:0.5em;
+    text-anchor:middle;
+    font-family:Orbitron;
+}
+
+/* ANIMATION */
+@keyframes fill{
+    from{
+        stroke-dasharray:0 100;
+    }
+    to{
+        stroke-dasharray:85 100;
+    }
+}
+.circle-svg {
+    width: 180px;
+    height: 180px;
+    transform: rotate(-90deg);
+}
+
+.bg {
+    fill: none;
+    stroke: #2a2a2a;
+    stroke-width: 15;
+}
+
+.progress {
+    fill: none;
+    stroke: #00f5ff;
+    stroke-width: 15;
+    stroke-dasharray: 502; /* circumference */
+    stroke-dashoffset: 502;
+    transition: stroke-dashoffset 1s ease;
+}
+
+.label {
+    font-size: 18px;
+    fill: white;
+    text-anchor: middle;
+    transform: rotate(90deg);
+}
+.percent {
+    fill: #00f5ff;
+    font-size: 20px;
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+
