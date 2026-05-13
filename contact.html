@@ -10,22 +10,70 @@
 <nav>
     <a href="index.html">Home</a>
     <a href="personal.html">Personal Info</a>
-    <a href="education.html">Pendidikan</a>
-    <a href="skills.html">Kemahiran</a>
+    <a href="education.html">Education</a>
+    <a href="skills.html">Skills</a>
     <a href="contact.html">Contact</a>
 </nav>
 
-<div class="container">
-    <h1>CONTACT</h1>
-    <div class="card">
-        <p>Email: example@email.com</p>
-        <p>Instagram: @username</p>
-        <p>Phone: 01x-xxxxxxx</p>
-    </div>
+<div class="card">
+
+    <p>
+        📧 Email:
+        <a href="mailto:yourname@email.com">
+            2025471644.student@university.edu.
+        </a>
+    </p>
+
+    <p>
+        🎓 UiTM Portal:
+        <a href="https://istudent.uitm.edu.my/" target="_blank">
+            Visit UiTM Portal
+        </a>
+    </p>
+
+    <hr>
+
+    <h2>🎮 Mini Game</h2>
+
+    <p>Guess a number between 1 - 10</p>
+
+    <input type="number" id="guessInput" placeholder="Enter number">
+
+    <button onclick="checkGuess()">Guess</button>
+
+    <p id="result"></p>
+
 </div>
+
+<script>
+function checkGuess() {
+
+    let randomNumber = Math.floor(Math.random() * 10) + 1;
+
+    let userGuess = document.getElementById("guessInput").value;
+
+    if(userGuess == randomNumber){
+        document.getElementById("result").innerHTML =
+        "🎉 Correct! The number was " + randomNumber;
+    }
+    else{
+        document.getElementById("result").innerHTML =
+        "❌ Wrong! The number was " + randomNumber;
+    }
+}
+</script>
+
 <!-- JS FILES -->
 <script src="js/script.js"></script>
 <script src="js/effects.js"></script>
 <script src="js/final-effects.js"></script>
+    <footer>
+    <p>Created by Danial Irfan for IML470</p>
+    <p class="disclaimer">
+        This website is created solely for educational purposes 
+        as part of IML470 coursework.
+    </p>
+</footer>
+
 </body>
 </html>
